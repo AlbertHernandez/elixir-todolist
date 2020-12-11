@@ -1,4 +1,4 @@
-defmodule TodolistWeb.StatusView do
+defmodule TodolistWeb.Api.V1.StatusView do
   use TodolistWeb, :view
 
   @spec render(String.t(), map) :: map

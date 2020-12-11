@@ -5,15 +5,11 @@ defmodule TodolistWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", TodolistWeb do
-    pipe_through :api
-    resources "/status", StatusController, only: [:index]
-  end
-
   scope "/api", TodolistWeb.Api, as: :api do
     pipe_through :api
 
     scope "/v1", V1, as: :v1 do
+      resources "/status", StatusController, only: [:index]
       resources "/todo", TodoController, only: [:index, :create, :show, :delete, :update]
     end
   end

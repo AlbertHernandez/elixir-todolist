@@ -24,6 +24,7 @@ defmodule TodolistWeb.Api.V1.TodoController do
     render(conn, "create.json", todo: todo)
   end
 
+  @spec update(Plug.Conn.t(), map) :: Plug.Conn.t()
   def update(conn, %{"id" => id, "title" => title, "description" => description }) do
     todo = %{
       id: id,

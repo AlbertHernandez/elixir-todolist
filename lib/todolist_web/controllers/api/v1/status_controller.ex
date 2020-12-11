@@ -1,4 +1,4 @@
-defmodule TodolistWeb.StatusController do
+defmodule TodolistWeb.Api.V1.StatusController do
   use TodolistWeb, :controller
 
   @spec index(Plug.Conn.t(), map) :: Plug.Conn.t()
