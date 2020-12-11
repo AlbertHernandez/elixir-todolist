@@ -8,12 +8,12 @@ defmodule TodolistWeb.Api.V1.TodoView do
       %{
         id: "aaa",
         title: "aaa",
-        description: "aaa",
+        description: "aaa"
       },
       %{
         id: "bbb",
         title: "bbb",
-        description: "bbb",
+        description: "bbb"
       }
     ]
   end
@@ -23,16 +23,16 @@ defmodule TodolistWeb.Api.V1.TodoView do
     %{
       id: todo.id,
       title: todo.title,
-      description: todo.description,
+      description: todo.description
     }
   end
 
   @spec render(String.t(), map) :: map
   def render("create.json", %{todo: todo}) do
     %{
-      id: Helpers.generate_id,
+      id: Helpers.generate_id(),
       title: todo.title,
-      description: todo.description,
+      description: todo.description
     }
   end
 end
